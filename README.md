@@ -1,2 +1,2 @@
-# Khwar'z dotfiles
+# Khwarz's dotfiles
 My personal dotfiles
