@@ -23,7 +23,8 @@ lsp.setup_servers({
     'lua_ls',
     'pylsp',
     'intelephense',
-    'clangd'
+    'clangd',
+    'texlab',
 })
 
 lsp.setup()

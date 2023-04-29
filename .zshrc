@@ -105,3 +105,5 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 alias config='/usr/bin/git --git-dir=/home/emmanuel/dotfiles --work-tree=/home/emmanuel'
+alias ssh='TERM=xterm-256color ssh'
+alias cod="cd $HOME/Documents/Code"
