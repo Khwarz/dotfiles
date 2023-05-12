@@ -1,0 +1,2 @@
+2023-05-08 15:41:58.930 [info] [perf] Render performance baseline is 40ms
+2023-05-08 15:42:05.288 [warning] SettingsEditor2: Settings not included in settingsLayout.ts: interactiveEditor.editMode, accessibility.verbosity.diff-editor, accessibility.verbosity.terminal

@@ -74,7 +74,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions vi-mode poetry)
+plugins=(git zsh-autosuggestions vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,6 +91,18 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+#
+
+# Quickly jump to project folders
+function cw() {
+    directory="$HOME/Documents/Code/$1"
+    if [ -d $directory ]; then
+        cd $directory
+    else
+        print "Uknown folder: $1"
+        return 1
+    fi
+}
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -106,4 +118,3 @@ alias vim="nvim"
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 alias config='/usr/bin/git --git-dir=/home/emmanuel/dotfiles --work-tree=/home/emmanuel'
 alias ssh='TERM=xterm-256color ssh'
-alias cod="cd $HOME/Documents/Code"

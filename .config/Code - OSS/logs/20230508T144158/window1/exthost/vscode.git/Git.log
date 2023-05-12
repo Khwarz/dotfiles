@@ -1,0 +1,26 @@
+2023-05-08 14:42:01.905 [info] Log level: Info
+2023-05-08 14:42:01.905 [info] Validating found git in: "git"
+2023-05-08 14:42:01.905 [info] Using git "2.40.1" from "git"
+2023-05-08 14:42:01.905 [info] > git rev-parse --show-toplevel [5ms]
+2023-05-08 14:42:01.905 [info] > git rev-parse --git-dir --git-common-dir [1ms]
+2023-05-08 14:42:01.905 [info] Open repository: /home/emmanuel/Documents/Code/todo-list
+2023-05-08 14:42:01.905 [info] > git rev-parse --show-toplevel [8ms]
+2023-05-08 14:42:01.905 [info] > git config --get commit.template [6ms]
+2023-05-08 14:42:01.905 [info] > git rev-parse --show-toplevel [2ms]
+2023-05-08 14:42:01.905 [info] No remotes found in the git config file.
+2023-05-08 14:42:01.905 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-08 14:42:01.905 [info] > git status -z -uall [1ms]
+2023-05-08 14:42:01.905 [info] No remotes found in the git config file.
+2023-05-08 14:42:01.905 [info] > git config --get commit.template [8ms]
+2023-05-08 14:42:01.905 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-08 14:42:01.905 [info] > git status -z -uall [1ms]
+2023-05-08 14:42:02.084 [info] > git check-ignore -v -z --stdin [4ms]
+2023-05-08 14:42:03.346 [info] > git show --textconv :main.js [13ms]
+2023-05-08 14:42:03.347 [info] > git ls-files --stage -- /home/emmanuel/Documents/Code/todo-list/main.js [2ms]
+2023-05-08 14:42:03.355 [info] > git cat-file -s d3c5b09ae7ca05f5f73cf01902344d0803eea54e [1ms]
+2023-05-08 14:42:13.320 [info] > git show --textconv :package-lock.json [8ms]
+2023-05-08 14:42:13.322 [info] > git ls-files --stage -- /home/emmanuel/Documents/Code/todo-list/package-lock.json [4ms]
+2023-05-08 14:42:13.333 [info] > git cat-file -s 47c2907e4943507c149806afc590ca3d88c58978 [3ms]
+2023-05-08 14:42:13.481 [info] > git show --textconv :main.js [13ms]
+2023-05-08 14:42:13.483 [info] > git ls-files --stage -- /home/emmanuel/Documents/Code/todo-list/main.js [4ms]
+2023-05-08 14:42:13.493 [info] > git cat-file -s d3c5b09ae7ca05f5f73cf01902344d0803eea54e [2ms]

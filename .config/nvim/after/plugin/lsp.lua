@@ -12,7 +12,7 @@ cmp.setup({
 
 lsp.on_attach(function(_, bufnr)
     lsp.default_keymaps({ buffer = bufnr, omit = { '<F3>', '<F4>' } })
-    vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
+    -- vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
 end)
 

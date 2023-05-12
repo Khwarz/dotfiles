@@ -1,0 +1,24 @@
+2023-05-08 15:23:07.558 [info] Log level: Info
+2023-05-08 15:23:07.558 [info] Validating found git in: "git"
+2023-05-08 15:23:07.558 [info] Using git "2.40.1" from "git"
+2023-05-08 15:23:07.558 [info] > git rev-parse --show-toplevel [7ms]
+2023-05-08 15:23:07.559 [info] > git rev-parse --git-dir --git-common-dir [8ms]
+2023-05-08 15:23:07.574 [info] Open repository: /home/emmanuel/Documents/Code/todo-list
+2023-05-08 15:23:07.625 [info] > git rev-parse --show-toplevel [34ms]
+2023-05-08 15:23:07.664 [info] > git rev-parse --show-toplevel [27ms]
+2023-05-08 15:23:07.672 [info] > git config --get commit.template [48ms]
+2023-05-08 15:23:07.730 [info] No remotes found in the git config file.
+2023-05-08 15:23:07.734 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [6ms]
+2023-05-08 15:23:07.755 [info] > git status -z -uall [8ms]
+2023-05-08 15:23:07.795 [info] > git config --get commit.template [16ms]
+2023-05-08 15:23:07.809 [info] No remotes found in the git config file.
+2023-05-08 15:23:07.812 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2023-05-08 15:23:07.856 [info] > git status -z -uall [23ms]
+2023-05-08 15:23:08.121 [info] > git check-ignore -v -z --stdin [6ms]
+2023-05-08 15:23:08.332 [info] > git show --textconv :main.js [12ms]
+2023-05-08 15:23:08.334 [info] > git ls-files --stage -- /home/emmanuel/Documents/Code/todo-list/main.js [3ms]
+2023-05-08 15:23:08.342 [info] > git cat-file -s d3c5b09ae7ca05f5f73cf01902344d0803eea54e [1ms]
+2023-05-08 15:23:26.793 [info] > git config --get commit.template [2ms]
+2023-05-08 15:23:26.799 [info] No remotes found in the git config file.
+2023-05-08 15:23:26.799 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-08 15:23:26.806 [info] > git status -z -uall [2ms]

@@ -15,3 +15,8 @@ vim.keymap.set("n", "[A",vim.cmd.last)
 
 vim.keymap.set("n", "]t",vim.cmd.tabn)
 vim.keymap.set("n", "[t",vim.cmd.tabp)
+
+vim.keymap.set("n", "<leader>f", vim.cmd.Format)
+
+-- vim.keymap.set("n", "gf", "<cmd>diffget //2<cr>")
+-- vim.keymap.set("n", "gh", "<cmd>diffget //3<cr>")
