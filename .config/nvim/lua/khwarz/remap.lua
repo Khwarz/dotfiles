@@ -13,6 +13,11 @@ vim.keymap.set("n", "[a",vim.cmd.prev)
 vim.keymap.set("n", "]A",vim.cmd.first)
 vim.keymap.set("n", "[A",vim.cmd.last)
 
+vim.keymap.set("n", "<C-k>", ":wincmd k <CR>")
+vim.keymap.set("n", "<C-j>", ":wincmd j <CR>")
+vim.keymap.set("n", "<C-h>", ":wincmd h <CR>")
+vim.keymap.set("n", "<C-l>", ":wincmd l <CR>")
+
 vim.keymap.set("n", "]t",vim.cmd.tabn)
 vim.keymap.set("n", "[t",vim.cmd.tabp)
 

@@ -4,10 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
-
-super + shift + Return
-	bash $HOME/.config/alacritty/scripts/open-in-current-dir.sh
+	kitty
 
 # program launcher
 super + @space

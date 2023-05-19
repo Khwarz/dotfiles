@@ -118,3 +118,9 @@ alias vim="nvim"
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 alias config='/usr/bin/git --git-dir=/home/emmanuel/dotfiles --work-tree=/home/emmanuel'
 alias ssh='TERM=xterm-256color ssh'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/emmanuel/google-cloud-sdk/path.zsh.inc' ]; then . '/home/emmanuel/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/emmanuel/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/emmanuel/google-cloud-sdk/completion.zsh.inc'; fi
