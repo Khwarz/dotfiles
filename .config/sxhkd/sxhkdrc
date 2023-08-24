@@ -6,6 +6,9 @@
 super + Return
 	kitty
 
+super + shift + b
+    sh $HOME/Scripts/bluetooth.sh
+
 # program launcher
 super + @space
 	sh $HOME/.config/rofi/scripts/appsmenu.sh 

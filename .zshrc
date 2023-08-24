@@ -4,6 +4,8 @@ export PATH=$HOME/Scripts:/usr/local/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/Applications/flutter/bin:$PATH
 export PATH=$HOME/Applications/android-studio/bin:$PATH
+export PATH=$HOME/.config/composer/vendor/bin:$PATH
+export WORKDIR=$HOME/Documents/github
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -12,7 +14,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="example"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -93,9 +95,8 @@ source $ZSH/oh-my-zsh.sh
 # fi
 #
 
-# Quickly jump to project folders
 function cw() {
-    directory="$HOME/Documents/Code/$1"
+    directory="$WORKDIR"
     if [ -d $directory ]; then
         cd $directory
     else
@@ -124,3 +125,5 @@ if [ -f '/home/emmanuel/google-cloud-sdk/path.zsh.inc' ]; then . '/home/emmanuel
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/emmanuel/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/emmanuel/google-cloud-sdk/completion.zsh.inc'; fi
+alias pa="php artisan"
+alias open="find $WORKDIR -maxdepth 2 -type d | fzf | xargs -o nvim"

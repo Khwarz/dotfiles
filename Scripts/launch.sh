@@ -2,9 +2,9 @@
 killall pulseaudio
 killall dunst
 
-nitrogen --restore
-
 pulseaudio --start
+
+nitrogen --restore
 
 setxkbmap -option compose:ralt
 

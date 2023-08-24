@@ -1,1 +1,0 @@
-require('poetry-nvim').setup()

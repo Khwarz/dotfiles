@@ -1,3 +1,5 @@
+local autocmd = vim.api.nvim_create_autocmd
+
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
@@ -31,3 +33,8 @@ vim.opt.cursorline = true
 -- vim.opt.colorcolumn = 50
 
 vim.g.mapleader = " "
+
+autocmd("BufRead,BufNewFile", {
+	pattern = "*.blade.php",
+	command = "set filetype=html",
+})
