@@ -5,7 +5,8 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/Applications/flutter/bin:$PATH
 export PATH=$HOME/Applications/android-studio/bin:$PATH
 export PATH=$HOME/.config/composer/vendor/bin:$PATH
-export WORKDIR=$HOME/Documents/github
+export PATH=$HOME/.cargo/bin:$PATH
+export WORKDIRS=$HOME/Documents/personal:$HOME/Documents/work
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -95,16 +96,6 @@ source $ZSH/oh-my-zsh.sh
 # fi
 #
 
-function cw() {
-    directory="$WORKDIR"
-    if [ -d $directory ]; then
-        cd $directory
-    else
-        print "Uknown folder: $1"
-        return 1
-    fi
-}
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -126,4 +117,4 @@ if [ -f '/home/emmanuel/google-cloud-sdk/path.zsh.inc' ]; then . '/home/emmanuel
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/emmanuel/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/emmanuel/google-cloud-sdk/completion.zsh.inc'; fi
 alias pa="php artisan"
-alias open="find $WORKDIR -maxdepth 2 -type d | fzf | xargs -o nvim"
+bindkey -s "^F" "tmux-sessionizer.sh\n"
