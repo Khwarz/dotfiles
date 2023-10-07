@@ -2,17 +2,14 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require("null-ls")
 
 local opts = {
-	sources = {
-		null_ls.builtins.formatting.isort,
-		null_ls.builtins.formatting.black,
-		null_ls.builtins.diagnostics.mypy.with({
-            extra_args = {"--python-executable", ".venv/bin/python"},
-        }),
-		null_ls.builtins.diagnostics.ruff,
+    sources = {
+        null_ls.builtins.formatting.isort,
+        null_ls.builtins.formatting.black,
+        null_ls.builtins.diagnostics.ruff,
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.prettier,
     },
-	on_attach = function(client, bufnr)
+    on_attach = function(client, bufnr)
         print(client.supports_method("textDocument/formatting"))
         if client.supports_method("textDocument/formatting") then
             vim.api.nvim_clear_autocmds({
@@ -22,7 +19,7 @@ local opts = {
             vim.api.nvim_create_autocmd("BufWritePre", {
                 group = augroup,
                 buffer = bufnr,
-                callback = function ()
+                callback = function()
                     vim.lsp.buf.format({ bufnr = bufnr })
                 end
             })

@@ -2,14 +2,14 @@
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/Scripts:/usr/local/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/Applications/flutter/bin:$PATH
-export PATH=$HOME/Applications/android-studio/bin:$PATH
-export PATH=$HOME/.config/composer/vendor/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
-export WORKDIRS=$HOME/Documents/personal:$HOME/Documents/work
+
+export WORKDIRS=$HOME/Documents/personal:$HOME/Documents/work:$HOME/Documents/training
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export EDITOR="$(which nvim)"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -77,7 +77,7 @@ ZSH_THEME="example"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions vi-mode)
+plugins=(git tmux vi-mode web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,17 +104,18 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
+#
+# User aliases
 alias vim="nvim"
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 alias config='/usr/bin/git --git-dir=/home/emmanuel/dotfiles --work-tree=/home/emmanuel'
 alias ssh='TERM=xterm-256color ssh'
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/emmanuel/google-cloud-sdk/path.zsh.inc' ]; then . '/home/emmanuel/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/emmanuel/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/emmanuel/google-cloud-sdk/completion.zsh.inc'; fi
 alias pa="php artisan"
+
+# User keybinding
+
 bindkey -s "^F" "tmux-sessionizer.sh\n"
+
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
