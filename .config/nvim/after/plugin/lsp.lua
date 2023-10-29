@@ -25,8 +25,9 @@ lsp.setup_servers({
     "clangd",
     "texlab",
     "tailwindcss",
-    "pyright",
+    -- "pyright",
     "java_language_server",
+    "ruff_lsp",
 })
 
 lsp.setup()

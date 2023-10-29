@@ -4,7 +4,7 @@ export PATH=$HOME/Scripts:/usr/local/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 
-export WORKDIRS=$HOME/Documents/personal:$HOME/Documents/work:$HOME/Documents/training
+export WORKDIRS=$HOME/Documents/personal:$HOME/Documents/work:$HOME/Documents/training:$HOME/Documents/fasfox
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 
 # Path to your oh-my-zsh installation.
