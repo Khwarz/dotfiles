@@ -1,4 +1,5 @@
-local lsp = require("lsp-zero").preset({})
+local lsp_zero = require("lsp-zero").preset({})
+local lsp_config = require("lspconfig")
 
 local cmp = require("cmp")
 cmp.setup({
@@ -10,13 +11,33 @@ cmp.setup({
     },
 })
 
-lsp.on_attach(function(_, bufnr)
-    lsp.default_keymaps({ buffer = bufnr, omit = { "<F3>", "<F4>" } })
-    -- vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
+lsp_zero.on_attach(function(_, bufnr)
+    lsp_zero.default_keymaps({ buffer = bufnr, omit = { "<F3>", "<F4>" } })
+    vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
     vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 end)
 
-lsp.setup_servers({
+lsp_config.pylsp.setup {
+    settings = {
+        pylsp = {
+            plugins = {
+                -- formatter options
+                black = { enabled = false },
+                autopep8 = { enabled = false },
+                yapf = { enabled = false },
+                -- linter options
+                pylint = { enabled = false },
+                pyflakes = { enabled = false },
+                pydocstyle = { enabled = false },
+                pycodestyle = { enabled = false },
+                -- type checker
+                pylsp_mypy = { enabled = true },
+            }
+        }
+    }
+}
+
+lsp_zero.setup_servers({
     "dartls",
     "tsserver",
     "eslint",
@@ -30,4 +51,4 @@ lsp.setup_servers({
     "ruff_lsp",
 })
 
-lsp.setup()
+lsp_zero.setup()

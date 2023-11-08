@@ -119,3 +119,5 @@ bindkey -s "^F" "tmux-sessionizer.sh\n"
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
+
+[ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
