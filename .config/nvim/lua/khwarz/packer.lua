@@ -8,11 +8,25 @@ return require("packer").startup(function(use)
         tag = "0.1.1",
         requires = { { "nvim-lua/plenary.nvim" } },
     })
-    use({ "projekt0n/github-nvim-theme", tag = "v0.0.7" })
+    use({ "projekt0n/github-nvim-theme", tag = "v1.0.1" })
     use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
     use("nvim-treesitter/playground")
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
+    use({ 'hrsh7th/cmp-nvim-lsp' })
+    use({ 'hrsh7th/cmp-buffer' })
+    use({ 'hrsh7th/cmp-path' })
+    use({ 'hrsh7th/cmp-cmdline' })
+    use({ 'hrsh7th/nvim-cmp' })
+    use({ "rafamadriz/friendly-snippets" })
+    use({ "saadparwaiz1/cmp_luasnip" })
+    use(
+        {
+            "L3MON4D3/LuaSnip",
+            tag = "v2.*",
+            run = "make install_jsregexp",
+        } -- Required
+    )
     use({
         "VonHeikemen/lsp-zero.nvim",
         branch = "v2.x",
@@ -27,11 +41,6 @@ return require("packer").startup(function(use)
                 end,
             },
             { "williamboman/mason-lspconfig.nvim" }, -- Optional
-
-            -- Autocompletion
-            { "hrsh7th/nvim-cmp" },     -- Required
-            { "hrsh7th/cmp-nvim-lsp" }, -- Required
-            { "L3MON4D3/LuaSnip" },     -- Required
         },
     })
     use({
@@ -63,7 +72,7 @@ return require("packer").startup(function(use)
             require("dap-python").setup(path)
         end
     })
-    use({ "jose-elias-alvarez/null-ls.nvim" })
+    use({ "nvimtools/none-ls.nvim" })
     use({ "thosakwe/vim-flutter" })
     use({
         "folke/trouble.nvim",
@@ -71,6 +80,5 @@ return require("packer").startup(function(use)
     })
     use({ "lervag/vimtex" })
     use({ "christoomey/vim-tmux-navigator" })
-    use("m4xshen/hardtime.nvim")
-    use({ 'ludovicchabant/vim-gutentags' })
+    use({ "m4xshen/hardtime.nvim" })
 end)

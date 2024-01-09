@@ -79,10 +79,35 @@ _G.packer_plugins = {
     path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["github-nvim-theme"] = {
     loaded = true,
@@ -109,10 +134,10 @@ _G.packer_plugins = {
     path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["null-ls.nvim"] = {
+  ["none-ls.nvim"] = {
     loaded = true,
-    path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+    path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
+    url = "https://github.com/nvimtools/none-ls.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -192,11 +217,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-gutentags"] = {
-    loaded = true,
-    path = "/home/emmanuel/.local/share/nvim/site/pack/packer/start/vim-gutentags",
-    url = "https://github.com/ludovicchabant/vim-gutentags"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,

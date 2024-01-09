@@ -10,6 +10,7 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="$(which nvim)"
+cdpath=($HOME/Documents $HOME/.config ..)
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -121,3 +122,11 @@ zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
+
+# pnpm
+export PNPM_HOME="/home/emmanuel/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -38,3 +38,9 @@ autocmd("BufRead,BufNewFile", {
 	pattern = "*.blade.php",
 	command = "set filetype=html",
 })
+
+autocmd("DiagnosticChanged", {
+    callback = function(args)
+        vim.diagnostic.setloclist({ open = false })
+    end
+})

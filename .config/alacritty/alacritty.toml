@@ -1,0 +1,60 @@
+live_config_reload = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[[colors.indexed_colors]]
+color = "0xd18616"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0xffa198"
+index = 17
+
+[colors.cursor]
+text = "0x0a0c10"
+cursor = "0xf0f3f6"
+
+[colors.bright]
+black = "0x9ea7b3"
+red = "0xffb1af"
+green = "0x4ae168"
+yellow = "0xf7c843"
+blue = "0x91cbff"
+magenta = "0xcb9eff"
+cyan = "0x39c5cf"
+white = "0xd9dee3"
+
+[colors.normal]
+black = "0x7a828e"
+red = "0xff9492"
+green = "0x26cd4d"
+yellow = "0xf0b72f"
+blue = "0x71b7ff"
+magenta = "0xcb9eff"
+cyan = "0x39c5cf"
+white = "0xd9dee3"
+
+
+[colors.primary]
+background = "0x0a0c10"
+foreground = "0xf0f3f6"
+
+[cursor]
+unfocused_hollow = false
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "JetBrains Mono Nerd Font"
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[selection]
+save_to_clipboard = false
+
+[window]
+dynamic_title = true

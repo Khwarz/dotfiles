@@ -8,6 +8,7 @@ local opts = {
         -- null_ls.builtins.diagnostics.ruff,
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.djlint,
     },
     on_attach = function(client, bufnr)
         print(client.supports_method("textDocument/formatting"))
