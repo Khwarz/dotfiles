@@ -6,12 +6,12 @@ local opts = {
         null_ls.builtins.formatting.isort,
         null_ls.builtins.formatting.black,
         -- null_ls.builtins.diagnostics.ruff,
+        null_ls.builtins.formatting.clang_format,
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.djlint,
     },
     on_attach = function(client, bufnr)
-        print(client.supports_method("textDocument/formatting"))
         if client.supports_method("textDocument/formatting") then
             vim.api.nvim_clear_autocmds({
                 group = augroup,
@@ -21,7 +21,7 @@ local opts = {
                 group = augroup,
                 buffer = bufnr,
                 callback = function()
-                    vim.lsp.buf.format({ bufnr = bufnr })
+                    vim.lsp.buf.format({ async = false })
                 end
             })
         end
