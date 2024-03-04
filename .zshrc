@@ -117,11 +117,11 @@ alias pa="php artisan"
 
 bindkey -s "^F" "tmux-sessionizer.sh\n"
 
+bindkey -s "^G" "wget --mirror --convert-links --adjust-extension --page-requisites --no-parent "
+
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
-
-[ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
 
 # pnpm
 export PNPM_HOME="/home/emmanuel/.local/share/pnpm"
