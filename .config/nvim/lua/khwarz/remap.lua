@@ -22,7 +22,7 @@ vim.keymap.set("n", "<C-k>", ":wincmd k <CR>")
 vim.keymap.set("n", "<C-j>", ":wincmd j <CR>")
 vim.keymap.set("n", "<C-h>", ":wincmd h <CR>")
 vim.keymap.set("n", "<C-l>", ":wincmd l <CR>")
-
+vim.keymap.set("c", "%%", "<C-R>=fnameescape(expand('%:h')).'/'<cr>")
 vim.keymap.set("n", "]t", vim.cmd.tabn)
 vim.keymap.set("n", "[t", vim.cmd.tabp)
 

@@ -108,10 +108,10 @@ source $ZSH/oh-my-zsh.sh
 #
 # User aliases
 alias vim="nvim"
-alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 alias config='/usr/bin/git --git-dir=/home/emmanuel/dotfiles --work-tree=/home/emmanuel'
 alias ssh='TERM=xterm-256color ssh'
 alias pa="php artisan"
+alias pydev="python -X dev"
 
 # User keybinding
 
@@ -130,3 +130,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

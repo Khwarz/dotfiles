@@ -20,9 +20,9 @@ return require("packer").startup(function(use)
     use({ "rafamadriz/friendly-snippets" })
     use({ "saadparwaiz1/cmp_luasnip" })
     use({
-            "L3MON4D3/LuaSnip",
-            tag = "v2.*",
-            run = "make install_jsregexp",
+        "L3MON4D3/LuaSnip",
+        tag = "v2.*",
+        run = "make install_jsregexp",
     })
     use({
         "VonHeikemen/lsp-zero.nvim",
