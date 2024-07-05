@@ -16,7 +16,7 @@ cdpath=($HOME/Documents $HOME/.config/nvim)
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="example"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -112,12 +112,15 @@ alias config='/usr/bin/git --git-dir=/home/emmanuel/dotfiles --work-tree=/home/e
 alias ssh='TERM=xterm-256color ssh'
 alias pa="php artisan"
 alias pydev="python -X dev"
+# alias vimconflict="vim $(gss | grep "\(UU\|AA\)" | awk '{print $2}')"
+# alias vimdeleted="vim $(gss | grep DU | awk '{print $2}')"
 
 # User keybinding
 
 bindkey -s "^F" "tmux-sessionizer.sh\n"
 
 bindkey -s "^G" "wget --mirror --convert-links --adjust-extension --page-requisites --no-parent "
+bindkey -s "^T" "make test_unit "
 
 autoload -U edit-command-line
 zle -N edit-command-line
@@ -132,5 +135,3 @@ esac
 # pnpm end
 
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)

@@ -1,5 +1,6 @@
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require("null-ls")
+require("lsp-format").setup {}
 
 local opts = {
     sources = {
@@ -9,21 +10,8 @@ local opts = {
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.djhtml,
     },
-    on_attach = function(client, bufnr)
-        if client.supports_method("textDocument/formatting") then
-            vim.api.nvim_clear_autocmds({
-                group = augroup,
-                buffer = bufnr,
-            })
-            vim.api.nvim_create_autocmd("BufWritePre", {
-                group = augroup,
-                buffer = bufnr,
-                callback = function()
-                    vim.lsp.buf.format({ async = false })
-                end
-            })
-        end
-    end,
+    debug = false,
+    on_attach = function(client, bufnr) require("lsp-format").on_attach(client, bufnr) end
 }
 
 null_ls.setup(opts)

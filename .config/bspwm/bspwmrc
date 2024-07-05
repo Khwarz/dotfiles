@@ -1,5 +1,15 @@
 #! /bin/sh
 
+killall dunst
+
+setxkbmap -option compose:ralt
+
+dunst &
+
+feh --bg-scale Pictures/Icy_Mountain.jpeg
+
+$HOME/.config/polybar/launch.sh
+
 wmname LG3D
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -14,6 +24,7 @@ bspc config gapless_monocle      true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a firefox desktop='^2' follow=on
+bspc rule -a firefoxdeveloperedition desktop='^2' follow=on
 bspc rule -a jetbrains-studio desktop='^3' state=floating follow=on
 bspc rule -a discord desktop='^3' follow=on
 bspc rule -a Chromium desktop='^2'
