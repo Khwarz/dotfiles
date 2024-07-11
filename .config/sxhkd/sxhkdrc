@@ -11,7 +11,7 @@ super + shift + b
 
 # program launcher
 super + @space
-	sh $HOME/.config/rofi/scripts/appsmenu.sh 
+	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
