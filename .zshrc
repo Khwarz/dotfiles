@@ -114,6 +114,7 @@ alias pa="php artisan"
 alias pydev="python -X dev"
 # alias vimconflict="vim $(gss | grep "\(UU\|AA\)" | awk '{print $2}')"
 # alias vimdeleted="vim $(gss | grep DU | awk '{print $2}')"
+alias nnote="vim $HOME/Documents/notes/$(date +%F)_notes.md"
 
 # User keybinding
 
@@ -135,3 +136,7 @@ esac
 # pnpm end
 
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
